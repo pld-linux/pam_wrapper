@@ -6,12 +6,12 @@
 Summary:	PAM wrapper library - tool to test PAM applications and modules
 Summary(pl.UTF-8):	Biblioteka obudowująca PAM - narzędzie do testowania aplikacji i modułów PAM
 Name:		pam_wrapper
-Version:	1.0.6
-Release:	2
+Version:	1.0.7
+Release:	1
 License:	GPL v3+
 Group:		Libraries
 Source0:	https://www.samba.org/ftp/cwrap/%{name}-%{version}.tar.gz
-# Source0-md5:	715b657d685aef0da98abc8bc1e27156
+# Source0-md5:	1e6111055929d5459f5707dd607461b2
 URL:		https://cwrap.org/pam_wrapper.html
 BuildRequires:	cmake >= 2.8.0
 # for tests
