@@ -6,12 +6,12 @@
 Summary:	PAM wrapper library - tool to test PAM applications and modules
 Summary(pl.UTF-8):	Biblioteka obudowująca PAM - narzędzie do testowania aplikacji i modułów PAM
 Name:		pam_wrapper
-Version:	1.0.7
-Release:	2
+Version:	1.1.3
+Release:	1
 License:	GPL v3+
 Group:		Libraries
 Source0:	https://www.samba.org/ftp/cwrap/%{name}-%{version}.tar.gz
-# Source0-md5:	1e6111055929d5459f5707dd607461b2
+# Source0-md5:	495cbab02e8f2b7a0e27f247f10836f3
 URL:		https://cwrap.org/pam_wrapper.html
 BuildRequires:	cmake >= 2.8.0
 # for tests
@@ -90,7 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README
+%doc AUTHORS CHANGELOG README.md
 %attr(755,root,root) %{_libdir}/libpam_wrapper.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libpam_wrapper.so.0
 %attr(755,root,root) %{_libdir}/libpam_wrapper.so
@@ -98,15 +98,17 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libpamtest.so.0
 %attr(755,root,root) %{_libdir}/libpamtest.so
 %dir %{_libdir}/pam_wrapper
+%attr(755,root,root) %{_libdir}/pam_wrapper/pam_chatty.so
 %attr(755,root,root) %{_libdir}/pam_wrapper/pam_get_items.so
 %attr(755,root,root) %{_libdir}/pam_wrapper/pam_matrix.so
 %attr(755,root,root) %{_libdir}/pam_wrapper/pam_set_items.so
 %{_includedir}/libpamtest.h
 %{_pkgconfigdir}/libpamtest.pc
 %{_pkgconfigdir}/pam_wrapper.pc
-%{_libdir}/cmake/libpamtest
 %{_libdir}/cmake/pam_wrapper
+%{_libdir}/cmake/pamtest
 %{_mandir}/man1/pam_wrapper.1*
+%{_mandir}/man8/pam_chatty.8*
 %{_mandir}/man8/pam_get_items.8*
 %{_mandir}/man8/pam_matrix.8*
 %{_mandir}/man8/pam_set_items.8*
